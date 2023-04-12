@@ -1,4 +1,4 @@
-# OOSE_Project 
+# Admission system 
  Project Name: University Admission System.
  
  Abdullah        (FA21-BSE-004)
