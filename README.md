@@ -1,5 +1,4 @@
 # OOSE_Project 
-Semester project 
  Project Name: University Admission System.
  
  Abdullah        (FA21-BSE-004)
