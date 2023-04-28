@@ -1,0 +1,15 @@
+#title{
+    -fx-background-color: #123456;
+}
+#heading{
+    -fx-background-color: #021246;
+}
+
+#Dbtn:hover{
+    -fx-background-color:#021246;
+    -fx-text-fill: white;
+}
+#first:hover{
+    -fx-background-color:#123444;
+    -fx-text-fill: white;
+}
