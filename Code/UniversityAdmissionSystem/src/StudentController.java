@@ -8,7 +8,7 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-public class FXMLController implements Initializable {
+public class StudentController implements Initializable {
     public void LoginBtn(ActionEvent actionEvent) {
     try {
         // Load the FXML file
@@ -51,7 +51,7 @@ public class FXMLController implements Initializable {
     public void adBtn(ActionEvent actionEvent) {
     try {
         // Load the FXML file
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("DashBoard.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("aLogin.fxml"));
         Parent root = fxmlLoader.load();
 
         // Create a new scene with the loaded FXML file
@@ -130,6 +130,25 @@ public void applyBtn(ActionEvent actionEvent) {
     try {
         // Load the FXML file
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("Apply.fxml"));
+        Parent root = fxmlLoader.load();
+
+        // Create a new scene with the loaded FXML file
+        Scene scene = new Scene(root);
+
+        // Get the stage information
+        Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+
+        // Set the new scene on the stage
+        stage.setScene(scene);
+        stage.show();
+    } catch (IOException e) {
+        e.printStackTrace();
+    }
+}
+    public void aBtn(ActionEvent actionEvent) {
+    try {
+        // Load the FXML file
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("aDashBoard.fxml"));
         Parent root = fxmlLoader.load();
 
         // Create a new scene with the loaded FXML file

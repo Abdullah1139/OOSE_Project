@@ -20,7 +20,7 @@ public class AdmissionSystem extends Application {
    FXMLLoader loader = new FXMLLoader(getClass().getResource("MainGUI.fxml"));
         Parent root = loader.load();
 
-        FXMLController controller = loader.getController();
+        StudentController controller = loader.getController();
 
         Scene scene = new Scene(root);
         stage.setScene(scene);

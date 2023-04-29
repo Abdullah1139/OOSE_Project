@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="Reg" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="592.0" prefWidth="704.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="FXMLController">
+<AnchorPane id="Reg" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="592.0" prefWidth="704.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="StudentController">
    <children>
       <VBox layoutX="-5.0" layoutY="-2.0" prefHeight="598.0" prefWidth="211.0" style="-fx-background-color: #123456;" stylesheets="@style.css">
          <children>
@@ -30,7 +30,9 @@
             <Button id="Dbtn" mnemonicParsing="false" onAction="#applyBtn" prefHeight="51.0" prefWidth="211.0" stylesheets="@style.css" text="Apply For Admission" />
 
             <Button id="Dbtn" mnemonicParsing="false" prefHeight="51.0" prefWidth="211.0" stylesheets="@style.css" text="Update Profile" />
-            <Button id="Dbtn" mnemonicParsing="false" prefHeight="51.0" prefWidth="211.0" stylesheets="@style.css" text="Submit Fee Receipt" />
+            <Button id="Dbtn" mnemonicParsing="false" prefHeight="51.0" prefWidth="211.0" stylesheets="@style.css" text="Submit Test Fee Receipt" />
+            <Button id="Dbtn" mnemonicParsing="false" prefHeight="51.0" prefWidth="211.0" stylesheets="@style.css" text="Submit Admission Fee Receipt" />
+            <Button id="Dbtn" mnemonicParsing="false" prefHeight="51.0" prefWidth="211.0" stylesheets="@style.css" text="View Fee Structure" />
             <Button id="Dbtn" mnemonicParsing="false" onAction="#logout" prefHeight="51.0" prefWidth="230.0" stylesheets="@style.css" text="LogOut" />
 
          </children>

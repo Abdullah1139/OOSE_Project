@@ -2,16 +2,6 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group>
-            <file>file:/C:/Users/Abdullah/Documents/NetBeansProjects/UniversityAdmissionSystem/src/RegForm.fxml</file>
-            <file>file:/C:/Users/Abdullah/Documents/NetBeansProjects/UniversityAdmissionSystem/src/MainGUI.fxml</file>
-            <file>file:/C:/Users/Abdullah/Documents/NetBeansProjects/UniversityAdmissionSystem/src/Login.fxml</file>
-            <file>file:/C:/Users/Abdullah/Documents/NetBeansProjects/UniversityAdmissionSystem/src/AdmissionSystem.java</file>
-            <file>file:/C:/Users/Abdullah/Documents/NetBeansProjects/UniversityAdmissionSystem/src/DashBoard.fxml</file>
-            <file>file:/C:/Users/Abdullah/Documents/NetBeansProjects/UniversityAdmissionSystem/src/Apply.fxml</file>
-            <file>file:/C:/Users/Abdullah/Documents/NetBeansProjects/UniversityAdmissionSystem/src/style.css</file>
-            <file>file:/C:/Users/Abdullah/Documents/NetBeansProjects/UniversityAdmissionSystem/src/FXMLController.java</file>
-            <file>file:/C:/Users/Abdullah/Documents/NetBeansProjects/UniversityAdmissionSystem/src/profile.fxml</file>
-        </group>
+        <group/>
     </open-files>
 </project-private>
