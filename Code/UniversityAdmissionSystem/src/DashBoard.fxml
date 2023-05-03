@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="Reg" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="592.0" prefWidth="704.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="StudentController">
+   <children>
+      <VBox layoutX="-5.0" layoutY="-2.0" prefHeight="598.0" prefWidth="211.0" style="-fx-background-color: #123456;" stylesheets="@style.css">
+         <children>
+            <AnchorPane prefHeight="119.0" prefWidth="211.0">
+               <children>
+                  <Label layoutX="14.0" layoutY="14.0" prefHeight="30.0" prefWidth="58.0" text="HI," textFill="WHITE">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="14.0" layoutY="53.0" prefHeight="41.0" prefWidth="143.0" text="USER." textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <Button id="Dbtn" mnemonicParsing="false" onAction="#profileBtn" prefHeight="51.0" prefWidth="211.0" stylesheets="@style.css" text="Profile" />
+            <Button id="Dbtn" mnemonicParsing="false" onAction="#applyBtn" prefHeight="51.0" prefWidth="211.0" stylesheets="@style.css" text="Apply For Admission" />
+
+            <Button id="Dbtn" mnemonicParsing="false" prefHeight="51.0" prefWidth="211.0" stylesheets="@style.css" text="Update Profile" />
+            <Button id="Dbtn" mnemonicParsing="false" prefHeight="51.0" prefWidth="211.0" stylesheets="@style.css" text="Submit Test Fee Receipt" />
+            <Button id="Dbtn" mnemonicParsing="false" prefHeight="51.0" prefWidth="211.0" stylesheets="@style.css" text="Submit Admission Fee Receipt" />
+            <Button id="Dbtn" mnemonicParsing="false" prefHeight="51.0" prefWidth="211.0" stylesheets="@style.css" text="View Fee Structure" />
+            <Button id="Dbtn" mnemonicParsing="false" onAction="#logout" prefHeight="51.0" prefWidth="230.0" stylesheets="@style.css" text="LogOut" />
+
+         </children>
+      </VBox>
+      <AnchorPane layoutX="206.0" layoutY="-2.0" prefHeight="598.0" prefWidth="502.0" style="-fx-background-color: #123456;">
+         <children>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="40.0" layoutY="32.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@user.png" />
+               </image>
+            </ImageView>
+         </children></AnchorPane>
+   </children>
+</AnchorPane>
