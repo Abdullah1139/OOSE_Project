@@ -1,3 +1,4 @@
+import Controllers.StudentController;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -17,13 +18,14 @@ public class AdmissionSystem extends Application {
 
     @Override
     public void start(Stage stage) throws Exception {
-   FXMLLoader loader = new FXMLLoader(getClass().getResource("MainGUI.fxml"));
+   FXMLLoader loader = new FXMLLoader(getClass().getResource("UI/MainGUI.fxml"));
         Parent root = loader.load();
 
         StudentController controller = loader.getController();
 
         Scene scene = new Scene(root);
         stage.setScene(scene);
+        stage.setTitle("University Admission System");
         stage.show();
     }
     }

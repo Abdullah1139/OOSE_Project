@@ -1,18 +1,25 @@
+package Controllers;
+
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.stage.Stage;
 public class StudentController implements Initializable {
+    
+    
+    
     public void LoginBtn(ActionEvent actionEvent) {
     try {
         // Load the FXML file
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("DashBoard.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/UI/DashBoard.fxml"));
         Parent root = fxmlLoader.load();
 
         // Create a new scene with the loaded FXML file
@@ -31,7 +38,7 @@ public class StudentController implements Initializable {
     public void stBtn(ActionEvent actionEvent) {
     try {
         // Load the FXML file
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("Login.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/UI/Login.fxml"));
         Parent root = fxmlLoader.load();
 
         // Create a new scene with the loaded FXML file
@@ -51,7 +58,7 @@ public class StudentController implements Initializable {
     public void adBtn(ActionEvent actionEvent) {
     try {
         // Load the FXML file
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("aLogin.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/UI/aLogin.fxml"));
         Parent root = fxmlLoader.load();
 
         // Create a new scene with the loaded FXML file
@@ -70,7 +77,7 @@ public class StudentController implements Initializable {
     public void RegBtn(ActionEvent actionEvent) {
     try {
         // Load the FXML file
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("RegForm.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/UI/RegForm.fxml"));
         Parent root = fxmlLoader.load();
 
         // Create a new scene with the loaded FXML file
@@ -89,7 +96,7 @@ public class StudentController implements Initializable {
         public void logout(ActionEvent actionEvent) {
     try {
         // Load the FXML file
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("MainGUI.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/UI/MainGUI.fxml"));
         Parent root = fxmlLoader.load();
 
         // Create a new scene with the loaded FXML file
@@ -109,7 +116,7 @@ public class StudentController implements Initializable {
     public void profileBtn(ActionEvent actionEvent) {
     try {
         // Load the FXML file
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("profile.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/UI/profile.fxml"));
         Parent root = fxmlLoader.load();
 
         // Create a new scene with the loaded FXML file
@@ -129,7 +136,7 @@ public class StudentController implements Initializable {
 public void applyBtn(ActionEvent actionEvent) {
     try {
         // Load the FXML file
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("Apply.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/UI/Apply.fxml"));
         Parent root = fxmlLoader.load();
 
         // Create a new scene with the loaded FXML file
@@ -148,7 +155,7 @@ public void applyBtn(ActionEvent actionEvent) {
     public void aBtn(ActionEvent actionEvent) {
     try {
         // Load the FXML file
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("aDashBoard.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/UI/aDashBoard.fxml"));
         Parent root = fxmlLoader.load();
 
         // Create a new scene with the loaded FXML file
