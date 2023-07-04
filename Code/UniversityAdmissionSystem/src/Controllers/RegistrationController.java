@@ -61,7 +61,7 @@ public void submitRegistration(ActionEvent actionEvent) {
 
     
     Registration.saveRegistration(registrationDTO);
-
+  
 }
 
     public void RegBtn(ActionEvent actionEvent) {
