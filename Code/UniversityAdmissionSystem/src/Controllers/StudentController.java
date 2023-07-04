@@ -171,6 +171,25 @@ public void applyBtn(ActionEvent actionEvent) {
         e.printStackTrace();
     }
 }
+        public void updateBtn(ActionEvent actionEvent) {
+    try {
+        // Load the FXML file
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/UI/Update.fxml"));
+        Parent root = fxmlLoader.load();
+
+        // Create a new scene with the loaded FXML file
+        Scene scene = new Scene(root);
+
+        // Get the stage information
+        Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+
+        // Set the new scene on the stage
+        stage.setScene(scene);
+        stage.show();
+    } catch (IOException e) {
+        e.printStackTrace();
+    }
+}
     @Override
     public void initialize(URL url, ResourceBundle rb) {
 

@@ -1,5 +1,6 @@
 package Controllers;
 
+import DAL.Registration;
 import dto.RegistrationDTO;
 import java.io.IOException;
 import java.net.URL;
@@ -43,6 +44,7 @@ public class RegistrationController implements Initializable {
 
     @FXML
     private TextField phone_number;
+    
 
  @FXML
 public void submitRegistration(ActionEvent actionEvent) {
@@ -57,34 +59,9 @@ public void submitRegistration(ActionEvent actionEvent) {
 
     RegistrationDTO registrationDTO = new RegistrationDTO(firstName, lastName, emailValue, phoneNumber, addressValue, dateOfBirth, passwordValue);
 
-    // Insert the registration details into the database
-    try (Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:1139/AdmissionSystem", "UAS", "uas")) {
-        String query = "INSERT INTO registration (first_name, last_name, email, phone_number, address, date_of_birth, password) VALUES (?, ?, ?, ?, ?, ?, ?)";
-        PreparedStatement statement = connection.prepareStatement(query);
-        statement.setString(1, registrationDTO.getFirstName());
-        statement.setString(2, registrationDTO.getLastName());
-        statement.setString(3, registrationDTO.getEmail());
-        statement.setString(4, registrationDTO.getPhoneNumber());
-        statement.setString(5, registrationDTO.getAddress());
-        statement.setDate(6, java.sql.Date.valueOf(registrationDTO.getDateOfBirth()));
-        statement.setString(7, registrationDTO.getPassword());
-        statement.executeUpdate();
+    
+    Registration.saveRegistration(registrationDTO);
 
-        // Display success message
-        Alert alert = new Alert(Alert.AlertType.INFORMATION);
-        alert.setHeaderText(null);
-        alert.setTitle("Registration Successful");
-        alert.setContentText("Registration details have been saved.");
-        alert.showAndWait();
-    } catch (SQLException e) {
-        e.printStackTrace();
-        // Display error message
-        Alert alert = new Alert(Alert.AlertType.ERROR);
-        alert.setHeaderText(null);
-        alert.setTitle("Error");
-        alert.setContentText("An error occurred while saving the registration details.");
-        alert.showAndWait();
-    }
 }
 
     public void RegBtn(ActionEvent actionEvent) {
