@@ -19,6 +19,11 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import java.sql.*;
+import java.util.List;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
+import javafx.scene.control.cell.PropertyValueFactory;
+
 
 
 
@@ -44,6 +49,51 @@ public class RegistrationController implements Initializable {
 
     @FXML
     private TextField phone_number;
+    
+     @FXML
+    private TableView<RegistrationDTO> registrationsTable;
+
+    @FXML
+    private TableColumn<RegistrationDTO, String> firstNameColumn;
+
+    @FXML
+    private TableColumn<RegistrationDTO, String> lastNameColumn;
+
+    @FXML
+    private TableColumn<RegistrationDTO, String> emailColumn;
+
+    @FXML
+    private TableColumn<RegistrationDTO, String> phoneNumberColumn;
+
+    @FXML
+    private TableColumn<RegistrationDTO, String> addressColumn;
+
+    @FXML
+    private TableColumn<RegistrationDTO, String> dateOfBirthColumn;
+
+    @FXML
+    private TableColumn<RegistrationDTO, String> passwordColumn;
+
+    @FXML
+    public void initialize() {
+        firstNameColumn.setCellValueFactory(new PropertyValueFactory<>("firstName"));
+        lastNameColumn.setCellValueFactory(new PropertyValueFactory<>("lastName"));
+        emailColumn.setCellValueFactory(new PropertyValueFactory<>("email"));
+        phoneNumberColumn.setCellValueFactory(new PropertyValueFactory<>("phoneNumber"));
+        addressColumn.setCellValueFactory(new PropertyValueFactory<>("address"));
+        dateOfBirthColumn.setCellValueFactory(new PropertyValueFactory<>("dateOfBirth"));
+        passwordColumn.setCellValueFactory(new PropertyValueFactory<>("password"));
+
+        loadRegistrations();
+    }
+
+    private void loadRegistrations() {
+        // Retrieve registrations data from the database using RegistrationDAL
+        List<RegistrationDTO> registrations = Registration.getAllRegistrations();
+
+        // Add registrations data to the table
+        registrationsTable.getItems().addAll(registrations);
+    }
     
 
  @FXML
