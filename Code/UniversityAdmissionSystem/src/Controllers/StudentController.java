@@ -11,6 +11,9 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
+import javafx.scene.control.Label;
+import javafx.scene.control.ProgressBar;
+import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 public class StudentController implements Initializable {
     
@@ -190,6 +193,33 @@ public void applyBtn(ActionEvent actionEvent) {
         e.printStackTrace();
     }
 }
+           public void submitBtn(ActionEvent actionEvent) {
+        try {
+            // Load the FXML file
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/UI/GEFRecipt.fxml"));
+            Parent root = fxmlLoader.load();
+
+            // Create a new scene with the loaded FXML file
+            Scene scene = new Scene(root);
+
+            // Get the stage information
+            Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+
+            // Set the new scene on the stage
+            stage.setScene(scene);
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+    
+    @FXML
+    private void handleBrowseButtonAction() {
+        FileChooser fileChooser = new FileChooser();
+        // Set any file chooser properties if needed
+        // Show the file chooser dialog
+        // Retrieve the selected file and update the selectedFileLabel
+    }
     @Override
     public void initialize(URL url, ResourceBundle rb) {
 

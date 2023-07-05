@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.control.ProgressBar?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
@@ -28,22 +29,32 @@
             </AnchorPane>
             <Button id="Dbtn" mnemonicParsing="false" onAction="#profileBtn" prefHeight="51.0" prefWidth="211.0" stylesheets="@style.css" text="Profile" />
             <Button id="Dbtn" mnemonicParsing="false" onAction="#applyBtn" prefHeight="51.0" prefWidth="211.0" stylesheets="@style.css" text="Apply For Admission" />
-
             <Button id="Dbtn" mnemonicParsing="false" onAction="#updateBtn" prefHeight="51.0" prefWidth="211.0" stylesheets="@style.css" text="Update Profile" />
             <Button id="Dbtn" mnemonicParsing="false" onAction="#submitBtn" prefHeight="51.0" prefWidth="211.0" stylesheets="@style.css" text="Submit Test Fee Receipt" />
             <Button id="Dbtn" mnemonicParsing="false" prefHeight="51.0" prefWidth="211.0" stylesheets="@style.css" text="Submit Admission Fee Receipt" />
             <Button id="Dbtn" mnemonicParsing="false" prefHeight="51.0" prefWidth="211.0" stylesheets="@style.css" text="View Fee Structure" />
             <Button id="Dbtn" mnemonicParsing="false" onAction="#logout" prefHeight="51.0" prefWidth="230.0" stylesheets="@style.css" text="LogOut" />
-
          </children>
       </VBox>
-      <AnchorPane layoutX="206.0" layoutY="-2.0" prefHeight="598.0" prefWidth="502.0" style="-fx-background-color: #123456;">
+      <VBox alignment="CENTER" layoutX="253.0" layoutY="187.0" prefHeight="201.0" prefWidth="390.0" spacing="10">
+         <padding>
+            <Insets bottom="20" left="20" right="20" top="20" />
+         </padding>
          <children>
-            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="40.0" layoutY="32.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@user.png" />
-               </image>
-            </ImageView>
-         </children></AnchorPane>
+            <Label styleClass="title" text="Submit Entry Test Receipt" />
+            <HBox alignment="CENTER" spacing="10">
+               <children>
+                  <Label text="Choose File:" />
+                  <Button onAction="#handleBrowseButtonAction" styleClass="browse-button" text="Browse" />
+                  <Label fx:id="selectedFileLabel" />
+               </children>
+            </HBox>
+            <ProgressBar fx:id="progressBar" minWidth="250" progress="0.0" />
+            <Button onAction="#handleSubmitButtonAction" styleClass="submit-button" text="Submit" />
+         </children>
+         <stylesheets>
+            <URL value="@styles.css" />
+         </stylesheets>
+      </VBox>
    </children>
 </AnchorPane>
