@@ -103,6 +103,7 @@ public void submitRegistration(ActionEvent actionEvent) {
             e.printStackTrace();
         }
     }
+    
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {

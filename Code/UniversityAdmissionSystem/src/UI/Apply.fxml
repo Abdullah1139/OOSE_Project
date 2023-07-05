@@ -31,7 +31,7 @@
             <Button id="Dbtn" mnemonicParsing="false" onAction="#applyBtn" prefHeight="51.0" prefWidth="211.0" stylesheets="@style.css" text="Apply For Admission" />
 
             <Button id="Dbtn" mnemonicParsing="false" onAction="#updateBtn" prefHeight="51.0" prefWidth="211.0" stylesheets="@style.css" text="Update Profile" />
-            <Button id="Dbtn" mnemonicParsing="false" prefHeight="51.0" prefWidth="211.0" stylesheets="@style.css" text="Submit Test Fee Receipt" />
+            <Button id="Dbtn" mnemonicParsing="false" onAction="#submitBtn" prefHeight="51.0" prefWidth="211.0" stylesheets="@style.css" text="Submit Test Fee Receipt" />
             <Button id="Dbtn" mnemonicParsing="false" prefHeight="51.0" prefWidth="211.0" stylesheets="@style.css" text="Submit Admission Fee Receipt" />
             <Button id="Dbtn" mnemonicParsing="false" prefHeight="51.0" prefWidth="211.0" stylesheets="@style.css" text="View Fee Structure" />
             <Button id="Dbtn" mnemonicParsing="false" onAction="#logout" prefHeight="51.0" prefWidth="230.0" stylesheets="@style.css" text="LogOut" />
